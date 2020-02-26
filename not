@@ -1,0 +1,25 @@
+Just a pack of drivers for manual installation
+
+If you need some hitorical drivers please find them here
+http://download.hiveos.farm/drivers/
+
+
+By default TMP directory is on RAM disk so you need to enable logs to have some space. 
+logs-on
+reboot
+
+
+Nvidia driver installation:
+miner stop
+killall xinit
+NVIDIA-Linux-x86_64-xxx.xx.run
+
+
+AMD Driver installation:
+tar -Jxvf amdgpu-pro-XXXX.tar.xz
+./amdgpu-pro-install -y
+dpkg -l amdgpu-pro
+
+To install new amd driver you need to unisntall previous one, please run "amdgpu-pro-uninstall".
+Please unpack currently installed driver tar.gz to /var/opt/amdgpu-pro-local then "amdgpu-pro-uninstall" will work. 
+It was removed to save space.
